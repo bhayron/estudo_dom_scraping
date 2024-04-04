@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jsdom": "^24.0.0"
+    "jsdom": "^24.0.0",
+    "xmldom": "^0.6.0",
+    "xpath": "^0.0.34"
   }
 }

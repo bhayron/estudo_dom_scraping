@@ -46,5 +46,16 @@ console.log(paragrafo3);
 console.log(textoLink);
 console.log(link);
 
+const section4 = document.getElementById('formulario');
+const h2 = section4.querySelector('h2').textContent;
+const form = section4.querySelector('form');
+const inputs = form.querySelectorAll('label');
+console.log(h2);
+for (let i = 0; i < inputs.length; i++) {
+    console.log(inputs[i].textContent);
+}
+const footer = document.querySelector('footer');
+const textoFooter = footer.querySelector('p').textContent;
+console.log(textoFooter);
 
 

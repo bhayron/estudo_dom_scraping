@@ -4,42 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Acesso ao DOM Avançado</title>
+    <title>Exemplo Avançado de Acesso ao DOM</title>
+    <style>
+        .destaque {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1 id="tituloPrincipal">Página de Exemplo para Scraping</h1>
+        <h1 id="tituloPrincipal">Página de Exemplo Avançada para Scraping</h1>
     </header>
     <nav>
         <ul id="menuPrincipal">
             <li class="itemMenu"><a href="#secao1">Seção 1</a></li>
             <li class="itemMenu"><a href="#secao2">Seção 2</a></li>
             <li class="itemMenu"><a href="#secao3">Seção 3</a></li>
+            <li class="itemMenu"><a href="#formulario">Formulário</a></li>
         </ul>
     </nav>
     <section id="secao1" class="conteudo">
         <h2>Seção 1: Introdução</h2>
-        <p>Este é um parágrafo introdutório sobre a página. Aqui, você pode encontrar informações sobre diversos
-            tópicos.</p>
-        <img src="imagem-exemplo.jpg" alt="Imagem de Exemplo" class="imagemDestaque">
+        <p data-info="intro">Este é um parágrafo introdutório sobre a página. Aqui, você pode encontrar informações
+            sobre diversos tópicos.</p>
+        <img src="imagem-exemplo-1.jpg" alt="Imagem de Exemplo 1" class="imagemDestaque">
     </section>
     <section id="secao2" class="conteudo">
         <h2>Seção 2: Conteúdo Detalhado</h2>
         <p>Na Seção 2, o conteúdo começa a ficar mais detalhado. Explore mais sobre os tópicos abordados.</p>
         <ul class="listaDetalhes">
-            <li class="detalhe">Detalhe 1</li>
-            <li class="detalhe">Detalhe 2</li>
-            <li class="detalhe">Detalhe 3</li>
+            <li class="detalhe" data-id="1">Detalhe 1</li>
+            <li class="detalhe destaque" data-id="2">Detalhe 2</li>
+            <li class="detalhe" data-id="3">Detalhe 3</li>
         </ul>
+        <img src="imagem-exemplo-2.jpg" alt="Imagem de Exemplo 2" class="imagemDestaque">
     </section>
     <section id="secao3" class="conteudo">
         <h2>Seção 3: Conclusão</h2>
         <p>Na conclusão, revisamos os pontos principais discutidos na página.</p>
         <a href="https://www.exemplo.com" target="_blank" rel="noopener noreferrer">Saiba mais</a>
+        <img src="imagem-exemplo-3.jpg" alt="Imagem de Exemplo 3" class="imagemDestaque">
+    </section>
+    <section id="formulario" class="conteudo">
+        <h2>Formulário de Contato</h2>
+        <form id="formContato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
     </section>
     <footer>
-        <p>© 2024 Exemplo de Página para Scraping. Todos os direitos reservados.</p>
+        <p>© 2024 Exemplo de Página Avançada para Scraping. Todos os direitos reservados.</p>
     </footer>
 </body>
 
