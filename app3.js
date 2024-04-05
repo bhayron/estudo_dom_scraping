@@ -29,17 +29,16 @@ if (linhasFundoClaro.length > 0) {
 
     console.log("Último Julgamento com fundoClaro:");
     console.log(julgamentoUltimo);
-} else {
-    console.log("Não foram encontrados elementos com a classe fundoClaro.");
 }
+
 const linhaFundoEscuro = document.querySelectorAll("tr.fundoEscuro");
 
 // Verifica se existe pelo menos um elemento e seleciona o último
 if (linhaFundoEscuro.length > 0) {
-    const ultimoFundoClaro = linhaFundoEscuro[linhaFundoEscuro.length - 1];
+    const ultimoFundoEscuro = linhaFundoEscuro[linhaFundoEscuro.length - 1];
 
     // Agora você pode processar esse último elemento como necessário
-    const cells = ultimoFundoClaro.querySelectorAll("td");
+    const cells = ultimoFundoEscuro.querySelectorAll("td");
     const data = cells[0]?.textContent.trim() || "Data não disponível";
     const situacao = cells[1]?.textContent.trim() || "Situação não disponível";
     const decisao = cells[2]?.textContent.trim() || "Decisão não disponível";
@@ -49,6 +48,4 @@ if (linhaFundoEscuro.length > 0) {
 
     console.log("Último Julgamento com fundoEscuro:");
     console.log(julgamentoUltimo);
-} else {
-    console.log("Não foram encontrados elementos com a classe fundoEscuro.");
 }
