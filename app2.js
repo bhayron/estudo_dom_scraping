@@ -37,13 +37,12 @@ const document = dom.window.document;
 
 const linhas = document.querySelectorAll("table:nth-of-type(2) tr.fundoClaro");
 
-let julgamentos = Array.from(linhas).map(linha => {
+let julgamentosFor = [];
+linhas.forEach(linha => {
     const cells = linha.querySelectorAll("td");
-    return {
-        data: cells[0].textContent.trim(),
-        situacao: cells[1].textContent.trim(),
-        decisao: cells[2].textContent.trim(),
-    };
+    const data = cells[0].textContent.trim();
+    const situacao = cells[1].textContent.trim();
+    const decisao = cells[2].textContent.trim();
+    julgamentosFor.push({ data, situacao, decisao });
 });
-
-console.log(julgamentos);
+console.log(julgamentosFor);
